@@ -254,17 +254,20 @@ a{
     font-size: 1.2rem;
   }
   
-  .bar-chart .p-40 {
-    height: 40%;
+ .bar-chart .p-65 {
+    height: 65%;
+  }
+  .bar-chart .p-55 {
+    height: 55%;
   }
   .bar-chart .p-45 {
     height: 45%;
   }
-  .bar-chart .p-90 {
-    height: 90%;
+  .bar-chart .p-80 {
+    height: 80%;
   }
-  .bar-chart .p-95 {
-    height: 95%;
+  .bar-chart .p-75 {
+    height: 75%;
   }
   .bar-chart .aqua {
     border-color: #8dc5be;
