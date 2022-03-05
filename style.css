@@ -35,13 +35,13 @@ a{
     justify-content: space-between;
     padding: 1rem 1.5rem;
     z-index: 10;
-    background-color: hsl(232deg 26% 24%) ;
+    background-color: rgb(18, 18, 20) ;
 }
 
 .navList{
     list-style: none;
     position: absolute;
-    background: hsl(232deg 26% 24%);
+    background: rgb(0, 0, 0);
     width: 340px;
     padding: 1.5rem 0;
     gap: 1rem;
@@ -58,13 +58,31 @@ a{
     font-size: 18px;
     
 }
+/* animate svg */
+.animate{
+    transition: all .5s;
+    
+}
+.animate:hover{
+    -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+    -webkit-transform: rotateZ(-360deg) scale(1.5);
+    transform: rotateZ(-360deg) scale(1.5);
+}
+
+.animate-list:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
 
 /* Seção apresentação */
 .home--section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(232deg 26% 24%);
+    background-color: rgb(0, 0, 0);
 }
 
 .image-section{
@@ -72,19 +90,16 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 70%;
+    width: 90%;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 350px;
+    height: 450px;
     margin-right: 90px;
 }
-.image-section img{
-    width: 95%;
-    transform: translateY(-15%);
-}
+
 
 .text-section{
     display: flex;
@@ -105,7 +120,7 @@ a{
     width: 90%;
     text-align: left;
     font-size: 30px;
-    color: hsl(233, 8%, 62%);
+    color: hsl(188,95%,70%);
     margin-bottom: 1rem;
 }
 
@@ -113,7 +128,7 @@ a{
     width: 90%;
     text-align: center;
     font-size: 20px;
-    color: hsl(233, 8%, 62%);
+    color: rgb(252, 252, 252);
     margin-bottom: 1rem;
 }
 
@@ -128,18 +143,20 @@ a{
 
 /* Seção portfolio */
 .about--section{
-    background-color: hsl(232deg 26% 24%);
+    background-color: rgb(18, 18, 20);
 }
 
 .section-title{
     font-size: 36px;
-    color: hsl(240, 22%, 96%);;
-    text-align: center;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
 }
 .section-description{
-    font-size: 16px;
-    text-align: center;
-    color: hsl(167deg 94% 46%);
+    font-size: 26px;
+    margin-left: 260px;
+    margin-bottom: 30px;
+    color: hsl(188,95%,70%);
 }
 
 .card-container{
@@ -147,6 +164,7 @@ a{
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1rem;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .card{
@@ -161,6 +179,9 @@ a{
 .card-title{
     font-size: 24px;
     color: hsl(240, 22%, 96%);
+    text-align: center;
+    margin-top: -50px;
+    margin-left: 60px;
 }
 .card-description{
     font-size: 16px;
@@ -173,39 +194,64 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 35px;
 }
 
+/*animate card image */
+.card-image{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.card-image:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
 /* Seção Sobre */
 .article--section{
     overflow: hidden;
     align-items: center;
     display: flex;
-    justify-content: center;
-    background-color:hsl(232deg 26% 24%) ;
+    flex-direction: row;
+    background-color:rgb(18, 18, 20) ;
+}
+
+.section-about {
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 18, 20);
+}
+
+.article--section img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 8px solid #5f0993;
 }
 
 .article--section p {
     font-size: 20px;
     font-family:'Poppins', sans-serif;
-    color: hsl(167deg 94% 46%) ;
-    justify-content: center;
+    color: rgb(255, 255, 255) ;
+    text-align: center;
+    margin-bottom: 90px;
+    margin-top: 30px;
 }
-
-
 
 .align-r {
     color:rgb(244, 245, 250) ;
     text-align: center;
     font-size: 36px;
     font-family: 'Poppins', sans-serif;
-    background-color: hsl(232deg 26% 24%) ;
+    background-color: rgb(18, 18, 20) ;
 }
 
   .bar-chart {
     list-style: none;
     height: 450px;
     position: relative;
-    background: hsl(233deg 26% 24%);
+    background: rgb(18, 18, 20);
     padding: 0;
     margin: 0px;
     
@@ -214,20 +260,19 @@ a{
     display: inline-block;
     width: 16%;
     height: 100%;
-    background-color: #CCCCCC;
+    background-color: rgb(18, 18, 20);
     text-align: center;
-    color: hsl(233deg 26% 24%);
+    color: rgb(18, 18, 20);
     position: relative;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-size: 1.8rem;
     margin: 0 1.8% 0 0;
-    border: #BBBBBB solid 1px;
+    border: rgb(18, 18, 20) solid 1px;
     vertical-align: bottom;
-    border-bottom: #BBBBBB solid 1px;
-    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
-    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
-    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgb(18, 18, 20);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgb(18, 18, 20);
+    box-shadow: inset 0px 1px 0px 0px rgb(18, 18, 20);
   }
   .bar-chart li:nth-child(6n) {
     margin-right: 0;
@@ -254,7 +299,7 @@ a{
     font-size: 1.2rem;
   }
   
- .bar-chart .p-65 {
+  .bar-chart .p-65 {
     height: 65%;
   }
   .bar-chart .p-55 {
@@ -269,52 +314,45 @@ a{
   .bar-chart .p-75 {
     height: 75%;
   }
-  .bar-chart .aqua {
-    border-color: #8dc5be;
-    background-color: #b0dbd6;
-    background-image: -ms-linear-gradient(bottom, #5fb2a8, #b0dbd6);
-    background-image: -moz-linear-gradient(center bottom, #5fb2a8 0%, #b0dbd6 100%);
-    background-image: -o-linear-gradient(bottom, #5fb2a8, #b0dbd6);
+  .bar-chart .chart-one {
+    border-color: hsl(188,95%,70%);
+    background: rgb(95,9,147);
+    background: linear-gradient(0deg, rgba(95,9,147,1) 29%, rgba(185,77,207,1) 100%);
+    
   }
-  .bar-chart .pink {
-    border-color: #ebc0b5;
-    background-color: #f4dcd6;
-    background-image: -ms-linear-gradient(bottom, #e1ae9e, #f4dcd6);
-    background-image: -moz-linear-gradient(center bottom, #e1ae9e 0%, #f4dcd6 100%);
-    background-image: -o-linear-gradient(bottom, #e1ae9e, #f4dcd6);
+  .bar-chart .chart-two {
+    border-color: hsl(188,95%,70%);
+    background: rgb(95,9,147);
+    background: linear-gradient(0deg, rgba(95,9,147,1) 29%, rgba(185,77,207,1) 100%);
+    
   }
-  .bar-chart .yellow {
-    border-color: #e7af30;
-    background-color: #efc563;
-    background-image: -ms-linear-gradient(bottom, #dfae36, #efc563);
-    background-image: -moz-linear-gradient(center bottom, #dfae36 0%, #efc563 100%);
-    background-image: -o-linear-gradient(bottom, #dfae36, #efc563);
+  .bar-chart .chart-three {
+    border-color: hsl(188,95%,70%);
+    background: rgb(95,9,147);
+    background: linear-gradient(0deg, rgba(95,9,147,1) 29%, rgba(185,77,207,1) 100%);
+    
   }
-  .bar-chart .brown {
-    border-color: #dcb386;
-    background-color: #dcba83;
-    background-image: -ms-linear-gradient(bottom, #bc8e5b, #dcba83);
-    background-image: -moz-linear-gradient(center bottom, #bc8e5b 0%, #dcba83 100%);
-    background-image: -o-linear-gradient(bottom, #bc8e5b, #dcba83);
+  .bar-chart .chart-four {
+    border-color: hsl(188,95%,70%);
+    background: rgb(95,9,147);
+    background: linear-gradient(0deg, rgba(95,9,147,1) 29%, rgba(185,77,207,1) 100%);
+    
   }
-  .bar-chart .red {
-    border-color: #e14949;
-    background-color: #da6d6c;
-    background-image: -ms-linear-gradient(bottom, #ca4544, #da6d6c);
-    background-image: -moz-linear-gradient(center bottom, #ca4544 0%, #da6d6c 100%);
-    background-image: -o-linear-gradient(bottom, #ca4544, #da6d6c);
+  .bar-chart .chart-five {
+    border-color: hsl(188,95%,70%);
+    background: rgb(95,9,147);
+    background: linear-gradient(0deg, rgba(95,9,147,1) 29%, rgba(185,77,207,1) 100%);
+    
   }
   .bar-chart li.axis {
     width: 8%;
     border: 0;
     height: 450px;
-    background: hsl(233deg 26% 24%);
-    -webkit-box-shadow: inset 0 0 0 0 #ffffff;
-    -moz-box-shadow: inset 0 0 0 0 #ffffff;
-    box-shadow: inset 0 0 0 0 #ffffff;
+    background: rgb(18, 18, 20);
+    box-shadow: inset 0 0 0 0 #000000;
   }
   .bar-chart .label {
-    color: hsl(167deg 94% 46%);
+    color: hsl(188,95%,70%);
     margin: -0.6em 0 88px 0;
     font-size: 12px;
     font-size: 1.2rem;
@@ -323,7 +361,7 @@ a{
 
 /* Seção rodapé */
 .footer--section{
-    background-color: hsl(233deg 26% 24%) ;
+    background-color: rgb(18, 18, 20); ;
     padding: 3.5rem 0;
     gap: 2rem;
 }
@@ -383,7 +421,7 @@ a{
         left: auto;
         top: auto;
         font-size: 16px;
-        color: hsl(167deg 94% 46%);
+        color: hsl(188,95%,70%);
         font-family: 'Poppins', sans-serif;
     }
 
@@ -410,14 +448,14 @@ a{
     }
     .subText{
         text-align: left;
-        color: hsl(167deg 94% 46%);
+        color: hsl(188,95%,70%);
     }
 
     .subt{
         width: 90%;
         text-align: left;
         font-size: 30px;
-        color: hsl(233, 8%, 62%);
+        color: hsl(188,95%,70%);
         margin-bottom: 1rem;
     }
     .section{
@@ -453,30 +491,94 @@ a{
 @media screen and (max-width: 768px) {
     .image-section{
         
-        height: 100%;
+        height: 50%;
         background-size: contain;
         background-repeat: no-repeat;
         overflow: hidden;
         background-position: center;
     }
-    .image-section img{
-        width: 100%;
-        transform: translate(15%, -5%);
+
+    .image-section{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 400px;
+        margin-left: 65px;
+        
     }
+    
     .subText{
         text-align: center;
-        color: hsl(167deg 94% 46%);
+        color: hsl(188,95%,70%);
     }
     .subt{
         width: 90%;
         text-align: center;
         font-size: 30px;
-        color: hsl(233, 8%, 62%);
+        color: hsl(188,95%,70%);
         margin-bottom: 1rem;
     }
     
+    .section-description{
+        font-size: 26px;
+        color: hsl(188,95%,70%);
+        text-align: center;
+        margin-right: 250px;
+        width: 100%;
+    }
+
+    .card-title{
+        font-size: 24px;
+        color: hsl(240, 22%, 96%);
+        text-align: center;
+        margin-top: -50px;
+        margin-right: 60px;
+        width: 100%;
+    }
+
+    .card-description{
+        font-size: 16px;
+        text-align: center;
+        color: hsl(233, 8%, 62%);
+    }
+
+    .article--section img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        border: 8px solid #5f0993;
+        margin-bottom: 30px;
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr, 1fr));
+        gap: 1rem ;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .card-image{
+        min-height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    .card{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+        padding: 3rem 0;
+    }
+
+
     .bar-chart .label {
-        color: hsl(167deg 94% 46%);
+        color: hsl(188,95%,70%);
         margin: -0.6em 0 88px 0;
         font-size: 08px;
         font-size: 1.0rem;
@@ -488,7 +590,7 @@ a{
         list-style: none;
         height: 450px;
         position: relative;
-        background: hsl(233deg 26% 24%);
+        background: rgb(18, 18, 20);
         padding: 0;
         margin: 0px;
     }
@@ -517,28 +619,110 @@ a{
 @media screen and (max-width: 425px) {
     .image-section{
         
-        height: 100%;
+        height: 50%;
         background-size: contain;
         background-repeat: no-repeat;
         overflow: hidden;
         background-position: center;
     }
-    .image-section img{
-        width: 100%;
-        transform: translate(15%, -5%);
+
+    .image-section{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 400px;
+        margin-left: 80px;
+        margin-bottom: -60px;
+        margin-top: -60px;
+        
     }
+    
+    
     .subText{
         text-align: center;
-        color: hsl(167deg 94% 46%);
+        color: hsl(188,95%,70%);
     }
     .subt{
         width: 90%;
         text-align: center;
         font-size: 30px;
-        color: hsl(233, 8%, 62%);
+        color: hsl(188,95%,70%);
         margin-bottom: 1rem;
     }
     
+    .section-title{
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-title{
+        font-size: 24px;
+        color: hsl(240, 22%, 96%);
+        text-align: center;
+        margin-right: 60px;
+    }
+
+    .card-image{
+        min-height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .article--section{
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color:rgb(18, 18, 20) ;
+    }
+    
+    .section-about {
+        font-size: 36px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: rgb(18, 18, 20);
+    }
+    
+    .article--section img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        border: 8px solid #5f0993;
+    }
+    
+    .article--section p {
+        font-size: 20px;
+        font-family:'Poppins', sans-serif;
+        color: rgb(255, 255, 255) ;
+        text-align: center;
+        margin-bottom: 90px;
+        margin-top: 30px;
+    }
+
+    .bar-chart li {
+        display: inline-block;
+        width: 16%;
+        height: 100%;
+        background-color: rgb(18, 18, 20);
+        text-align: center;
+        color: rgb(18, 18, 20);
+        position: relative;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-size: 1.8rem;
+        margin: 0 1.0% 0 0;
+        border: rgb(18, 18, 20) solid 1px;
+        vertical-align: bottom;
+        border-bottom: rgb(18, 18, 20) solid 1px;
+        -webkit-box-shadow: inset 0px 1px 0px 0px rgb(18, 18, 20);
+        -moz-box-shadow: inset 0px 1px 0px 0px rgb(18, 18, 20);
+        box-shadow: inset 0px 1px 0px 0px rgb(18, 18, 20);
+      }
+
     .bar-chart .label {
         color: hsl(167deg 94% 46%);
         margin: -0.6em 0 88px 0;
@@ -552,7 +736,7 @@ a{
         list-style: none;
         height: 450px;
         position: relative;
-        background: hsl(233deg 26% 24%);
+        background: rgb(18, 18, 20);
         padding: 0;
         margin: 0px;
     }
